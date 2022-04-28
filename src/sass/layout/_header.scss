@@ -1,0 +1,14 @@
+@use "../variables/colors" as colors;
+@import "../variables/breakpoints";
+
+.todo {
+	&__header {
+		padding: 20px 0;
+		background-color: colors.$purple;
+		color: colors.$white;
+
+		&-title {
+			text-align: center;
+		}
+	}
+}
