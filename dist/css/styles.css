@@ -40,6 +40,16 @@ body {
 .todo__body {
   padding: 20px;
 }
+.todo__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.todo .nav__all, .todo .nav__completed {
+  list-style: none;
+}
+.todo .nav__all:hover, .todo .nav__completed:hover {
+  cursor: pointer;
+}
 .todo__input {
   padding: 10px;
   width: 100%;
@@ -63,6 +73,43 @@ body {
 }
 .todo__item__btn:hover {
   cursor: pointer;
+}
+
+#msg {
+  color: red;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0 50px;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+}
+
+#posts {
+  width: 400px;
+}
+
+i {
+  cursor: pointer;
+}
+
+#posts div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  gap: 25px;
+}
+
+#msg {
+  color: red;
 }
 
 ul {

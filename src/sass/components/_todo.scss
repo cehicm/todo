@@ -18,6 +18,25 @@
 		padding: 20px;
 	}
 
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav {
+
+		&__all,
+		&__completed {
+			list-style: none;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&__all {}
+	}
+
 	&__input {
 		padding: 10px;
 		width: 100%;
@@ -47,4 +66,41 @@
 			cursor: pointer;
 		}
 	}
+}
+
+#msg {
+	color: red;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0 50px;
+}
+
+.container {
+	display: flex;
+	gap: 50px;
+}
+
+#posts {
+	width: 400px;
+}
+
+i {
+	cursor: pointer;
+}
+
+#posts div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.options {
+	display: flex;
+	gap: 25px;
+}
+
+#msg {
+	color: red;
 }
