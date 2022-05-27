@@ -26,90 +26,39 @@ body {
   src: local(""), url("../fonts/raleway-v27-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-v27-latin-regular.woff2") format("woff2"), url("../fonts/raleway-v27-latin-regular.woff") format("woff"), url("../fonts/raleway-v27-latin-regular.ttf") format("truetype"), url("../fonts/raleway-v27-latin-regular.svg#Raleway") format("svg");
   /* Legacy iOS */
 }
-.todo__wrapper {
+.todo__container {
   width: 50vw;
-  height: 500px;
+  height: 80%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  padding: 20px;
   border: 2px solid #caa2eb;
   border-radius: 8px;
   overflow: scroll;
 }
-.todo__body {
-  padding: 20px;
+.todo__btn {
+  padding: 10px 25px;
+  border-radius: 4px;
 }
-.todo__nav {
-  display: flex;
-  justify-content: space-between;
+.todo__btn--add {
+  background-color: #caa2eb;
+  color: #ffffff;
+  border: none;
 }
-.todo .nav__all, .todo .nav__completed {
-  list-style: none;
-}
-.todo .nav__all:hover, .todo .nav__completed:hover {
-  cursor: pointer;
-}
-.todo__input {
-  padding: 10px;
-  width: 100%;
-  border-radius: 20px;
-}
-.todo__list__item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
-  width: 90%;
-  margin: 0 auto;
-  border: 1px solid #ffffff;
-  border-radius: 6px;
-  background-color: #b1ddb1;
-}
-.todo__item__btn {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-}
-.todo__item__btn:hover {
-  cursor: pointer;
-}
-
-#msg {
-  color: red;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 0 50px;
-}
-
-.container {
-  display: flex;
-  gap: 50px;
-}
-
-#posts {
-  width: 400px;
-}
-
-i {
-  cursor: pointer;
-}
-
-#posts div {
+.todo__output .output__list__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.options {
+.todo__output .output__list__item span {
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
-#msg {
-  color: red;
+ul {
+  list-style: none;
 }
 
 ul {

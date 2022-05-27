@@ -9,13 +9,13 @@ form.addEventListener("submit", (e) => {
 
 	let createPost = () => {
 		posts.innerHTML += `
-		<div>
+		<li class="output__list__item">
 		<p>${data.text}</p>
 		<span class="options">
 			<i onClick="editPost(this)" class="fas fa-edit"></i>
 			<i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
 		</span>
-	  </div>
+	  </li>
 		`;
 		input.value = "";
 	};

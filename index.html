@@ -13,27 +13,23 @@
 
 <body>
 	<section class="todo">
-		<div class="container">
-			<div class="left">
+		<div class="todo__container">
+			<div class="todo__input">
 				<form action="" id="form">
-					<label for="post">Post here</label>
+					<label for="post">Add something to do</label>
 					<br><br>
 					<textarea name="post" id="input" cols="30" rows="10"></textarea>
 					<br><br>
 					<div id="msg"></div>
-					<button type="submit">Post</button>
+					<button class="todo__btn todo__btn--add" type="submit">Add</button>
 				</form>
 			</div>
-			<div class="right">
-				<h3>Add todo</h3>
-				<div id="posts">
-				</div>
+			<div class="todo__output">
+				<ul id="posts">
+				</ul>
 			</div>
 		</div>
 	</section>
-	<ul id="result"></ul>
-
-
 	<script src="/src/scripts/app.js"></script>
 </body>
 

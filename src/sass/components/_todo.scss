@@ -2,105 +2,41 @@
 @import "../variables/breakpoints";
 
 .todo {
-	&__wrapper {
+	&__container {
 		width: 50vw;
-		height: 500px;
+		height: 80%;
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		padding: 20px;
 		border: 2px solid colors.$purple;
 		border-radius: 8px;
 		overflow: scroll;
 	}
 
-	&__body {
-		padding: 20px;
+	&__btn {
+		padding: 10px 25px;
+		border-radius: 4px;
+
+		&--add {
+			background-color: colors.$purple;
+			color: colors.$white;
+			border: none;
+		}
 	}
 
-	&__nav {
-		display: flex;
-		justify-content: space-between;
-	}
+	&__output {
+		.output__list__item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 
-	.nav {
-
-		&__all,
-		&__completed {
-			list-style: none;
-
-			&:hover {
-				cursor: pointer;
+			span {
+				display: flex;
+				gap: 20px;
 			}
 		}
-
-		&__all {}
 	}
 
-	&__input {
-		padding: 10px;
-		width: 100%;
-		border-radius: 20px;
-	}
-
-	&__list {
-		&__item {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			padding: 10px;
-			width: 90%;
-			margin: 0 auto;
-			border: 1px solid colors.$white;
-			border-radius: 6px;
-			background-color: colors.$pastel-green;
-		}
-	}
-
-	&__item__btn {
-		display: inline-block;
-		height: 20px;
-		width: 20px;
-
-		&:hover {
-			cursor: pointer;
-		}
-	}
-}
-
-#msg {
-	color: red;
-}
-
-body {
-	font-family: sans-serif;
-	margin: 0 50px;
-}
-
-.container {
-	display: flex;
-	gap: 50px;
-}
-
-#posts {
-	width: 400px;
-}
-
-i {
-	cursor: pointer;
-}
-
-#posts div {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.options {
-	display: flex;
-	gap: 25px;
-}
-
-#msg {
-	color: red;
 }
