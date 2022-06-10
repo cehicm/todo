@@ -28,18 +28,22 @@ form.addEventListener("submit", (e) => {
 
 	let formValidation = () => {
 		if (input.value === "") {
-			msg.innerHTML = "Posts can't be blank";
-			console.log("fail");
+			msg.innerHTML = "Field can't be blank";
 		} else {
 			acceptData();
+			msg.innerHTML = "";
 		}
 	};
 
 	formValidation();
 });
 
+let completedTodos = [];
+
 let deletePost = (e) => {
 	e.parentElement.parentElement.remove();
+	completedTodos.push(e);
+	console.log(completedTodos);
 };
 
 let editPost = (e) => {

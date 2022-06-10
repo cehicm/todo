@@ -29,10 +29,10 @@ body {
 .todo__container {
   width: 50vw;
   height: 80%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
   border: 2px solid #caa2eb;
   border-radius: 8px;
@@ -41,11 +41,22 @@ body {
 .todo__btn {
   padding: 10px 25px;
   border-radius: 4px;
+  border: none;
 }
 .todo__btn--add {
   background-color: #caa2eb;
   color: #ffffff;
-  border: none;
+}
+.todo__btn--completed {
+  background-color: #b1ddb1;
+  color: #000000;
+}
+.todo__btn--completed:hover, .todo__btn--completed:active {
+  filter: drop-shadow(2px 3px 2px #008000);
+}
+.todo__output {
+  height: 40%;
+  overflow: scroll;
 }
 .todo__output .output__list__item {
   display: flex;
@@ -56,9 +67,12 @@ body {
   display: flex;
   gap: 20px;
 }
-
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {

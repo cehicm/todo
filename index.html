@@ -14,20 +14,30 @@
 <body>
 	<section class="todo">
 		<div class="todo__container">
+			<div class="todo__header">
+				<a class="todo__btn todo__btn--completed" href="/src/html/completed.html">Ongoing</a>
+				<a class="todo__btn todo__btn--completed" href="/src/html/completed.html">Completed</a>
+			</div>
 			<div class="todo__input">
 				<form action="" id="form">
-					<label for="post">Add something to do</label>
-					<br><br>
+					<label for="post">Add a Todo</label>
+					<br /><br />
 					<textarea name="post" id="input" cols="30" rows="10"></textarea>
-					<br><br>
+					<br /><br />
 					<div id="msg"></div>
 					<button class="todo__btn todo__btn--add" type="submit">Add</button>
 				</form>
 			</div>
 			<div class="todo__output">
-				<ul id="posts">
-				</ul>
+				<div class="todo__output--curent">
+					<ul id="posts"></ul>
+				</div>
+				<div class="todo__output--completed">
+					<ul id="posts--completed"></ul>
+				</div>
 			</div>
+
+			<div class="todo__footer"></div>
 		</div>
 	</section>
 	<script src="/src/scripts/app.js"></script>
