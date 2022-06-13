@@ -37,8 +37,7 @@ i:hover {
   border: none;
 }
 .todo__btn--add {
-  background-color: #caa2eb;
-  color: #ffffff;
+  background-color: #b1ddb1;
 }
 .todo__btn--completed {
   background-color: #b1ddb1;
@@ -61,6 +60,7 @@ i:hover {
   justify-content: space-evenly;
   padding: 20px;
   overflow: scroll;
+  border-top: solid 20px #caa2eb;
 }
 .todo__wrapper {
   display: flex;
@@ -81,22 +81,6 @@ i:hover {
 }
 .todo__item--completed {
   text-decoration: line-through;
-}
-.todo__btn {
-  padding: 10px 25px;
-  border-radius: 4px;
-  border: none;
-}
-.todo__btn--add {
-  background-color: #caa2eb;
-  color: #ffffff;
-}
-.todo__btn--completed {
-  background-color: #b1ddb1;
-  color: #000000;
-}
-.todo__btn--completed:hover, .todo__btn--completed:active {
-  filter: drop-shadow(2px 3px 2px #008000);
 }
 .todo-output {
   min-width: 400px;
