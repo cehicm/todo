@@ -14,31 +14,31 @@
 <body>
 	<section class="todo">
 		<div class="todo__container">
-			<div class="todo__header">
-				<a class="todo__btn todo__btn--completed" href="/src/html/completed.html">Ongoing</a>
-				<a class="todo__btn todo__btn--completed" href="/src/html/completed.html">Completed</a>
-			</div>
-			<div class="todo__input">
-				<form action="" id="form">
-					<label for="post">Add a Todo</label>
-					<br /><br />
-					<textarea name="post" id="input" cols="30" rows="10"></textarea>
-					<br /><br />
-					<div id="msg"></div>
-					<button class="todo__btn todo__btn--add" type="submit">Add</button>
-				</form>
-			</div>
-			<div class="todo__output">
-				<div class="todo__output--curent">
-					<ul id="posts"></ul>
+			<div class="todo__wrapper">
+				<div class="todo__input">
+					<form action="POST" id="todo-form">
+						<label for="post">Add a Todo</label>
+						<textarea name="post" id="todo-input" cols="30" rows="10"></textarea>
+						<div id="todo-msg"></div>
+						<button class="todo__btn todo__btn--add" type="submit">Add</button>
+					</form>
 				</div>
-				<div class="todo__output--completed">
-					<ul id="posts--completed"></ul>
+				<div class="todo-output">
+					<div class="todo-output__curent">
+						<ul id="todo-posts" class="todo-output__list">
+							<li>To Do:</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
-			<div class="todo__footer"></div>
-		</div>
+			<div class="todo-output__completed">
+				<ul id="posts--completed" class="todo-output__list">
+					<li>Completed:</li>
+				</ul>
+			</div>
+			<div class="todo__footer">
+			</div>
 	</section>
 	<script src="/src/scripts/app.js"></script>
 </body>

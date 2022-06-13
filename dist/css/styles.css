@@ -27,16 +27,33 @@ body {
   /* Legacy iOS */
 }
 .todo__container {
-  width: 50vw;
   height: 80%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
   padding: 20px;
-  border: 2px solid #caa2eb;
-  border-radius: 8px;
   overflow: scroll;
+}
+.todo__wrapper {
+  display: flex;
+  gap: 50px;
+  border-right: 1px solid;
+  padding: 0 20px;
+}
+.todo__input form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+.todo-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.todo__item--completed {
+  text-decoration: line-through;
 }
 .todo__btn {
   padding: 10px 25px;
@@ -54,18 +71,25 @@ body {
 .todo__btn--completed:hover, .todo__btn--completed:active {
   filter: drop-shadow(2px 3px 2px #008000);
 }
-.todo__output {
-  height: 40%;
-  overflow: scroll;
+.todo-output {
+  min-width: 400px;
 }
-.todo__output .output__list__item {
+.todo-output__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.todo-output .output__list__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.todo__output .output__list__item span {
+.todo-output .output__list__item span {
   display: flex;
   gap: 20px;
+}
+.todo-output__completed {
+  padding: 0 20px;
 }
 ul {
   list-style: none;

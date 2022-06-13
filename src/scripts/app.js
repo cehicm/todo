@@ -1,7 +1,7 @@
-let form = document.getElementById("form");
-let input = document.getElementById("input");
-let msg = document.getElementById("msg");
-let posts = document.getElementById("posts");
+let form = document.getElementById("todo-form");
+let input = document.getElementById("todo-input");
+let msg = document.getElementById("todo-msg");
+let posts = document.getElementById("todo-posts");
 
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
 	let createPost = () => {
 		posts.innerHTML += `
 		<li class="output__list__item">
-		<p>${data.text}</p>
+		${data.text}
 		<span class="options">
 			<i onClick="editPost(this)" class="fas fa-edit"></i>
 			<i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
@@ -41,12 +41,17 @@ form.addEventListener("submit", (e) => {
 let completedTodos = [];
 
 let deletePost = (e) => {
-	e.parentElement.parentElement.remove();
-	completedTodos.push(e);
-	console.log(completedTodos);
+	let completedPosts = document.getElementById("posts--completed");
+
+	let thisTodo = e.parentElement.parentElement;
+	thisTodo.remove();
+
+	completedPosts.innerHTML += `<li class="todo__item--completed">${thisTodo.textContent}</li>`;
 };
 
 let editPost = (e) => {
-	input.value = e.parentElement.previousElementSibling.innerHTML;
+	input.value = e.parentElement.parentElement.innerText;
 	e.parentElement.parentElement.remove();
 };
+
+// todo__item--completed
