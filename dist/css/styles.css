@@ -26,6 +26,33 @@ body {
   src: local(""), url("../fonts/raleway-v27-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-v27-latin-regular.woff2") format("woff2"), url("../fonts/raleway-v27-latin-regular.woff") format("woff"), url("../fonts/raleway-v27-latin-regular.ttf") format("truetype"), url("../fonts/raleway-v27-latin-regular.svg#Raleway") format("svg");
   /* Legacy iOS */
 }
+button:hover,
+i:hover {
+  cursor: pointer;
+}
+
+.todo__btn {
+  padding: 10px 25px;
+  border-radius: 4px;
+  border: none;
+}
+.todo__btn--add {
+  background-color: #caa2eb;
+  color: #ffffff;
+}
+.todo__btn--completed {
+  background-color: #b1ddb1;
+  color: #000000;
+}
+.todo__btn--completed:hover, .todo__btn--completed:active {
+  filter: drop-shadow(2px 3px 2px #008000);
+}
+.todo__btn--clear-all {
+  position: absolute;
+  bottom: 0;
+  background-color: #ff7474;
+}
+
 .todo__container {
   height: 80%;
   margin: 0 auto;
@@ -89,8 +116,10 @@ body {
   gap: 20px;
 }
 .todo-output__completed {
+  position: relative;
   padding: 0 20px;
 }
+
 ul {
   list-style: none;
 }

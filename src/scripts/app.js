@@ -47,11 +47,17 @@ let deletePost = (e) => {
 	thisTodo.remove();
 
 	completedPosts.innerHTML += `<li class="todo__item--completed">${thisTodo.textContent}</li>`;
+
+	const clearAllBtn = document.getElementById("btn-clear-all");
+
+	let clearAllComplete = () => {
+		completedPosts.innerHTML = ``;
+	};
+
+	clearAllBtn.addEventListener("click", clearAllComplete);
 };
 
 let editPost = (e) => {
 	input.value = e.parentElement.parentElement.innerText;
 	e.parentElement.parentElement.remove();
 };
-
-// todo__item--completed

@@ -1,0 +1,36 @@
+@use "../variables/colors"as colors;
+
+button:hover,
+i:hover {
+    cursor: pointer;
+}
+
+.todo {
+    &__btn {
+        padding: 10px 25px;
+        border-radius: 4px;
+        border: none;
+
+        &--add {
+            background-color: colors.$purple;
+            color: colors.$white;
+
+        }
+
+        &--completed {
+            background-color: colors.$pastel-green;
+            color: colors.$black;
+
+            &:hover,
+            &:active {
+                filter: drop-shadow(2px 3px 2px colors.$dark-green);
+            }
+        }
+
+        &--clear-all {
+            position: absolute;
+            bottom: 0;
+            background-color: colors.$pastel-red;
+        }
+    }
+}
