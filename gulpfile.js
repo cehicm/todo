@@ -35,7 +35,7 @@ function babelTask(cb) {
     )
     .pipe(terser())
     .pipe(dest("dist/scripts"));
-    cb();
+  cb();
 }
 
 //Browser tasks
